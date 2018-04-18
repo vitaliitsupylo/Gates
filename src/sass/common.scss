@@ -1,0 +1,132 @@
+body {
+  font: 400 rem(17px)/1.8 $mainFont;
+  color: $mainColor;
+}
+
+.container {
+  width: 100%;
+  max-width: rem(1355px);
+  padding: 0 rem(5px);
+  margin: auto;
+}
+
+.title_block {
+  font-size: rem(40px);
+  font-weight: 700;
+  position: relative;
+  text-align: center;
+  &::before {
+    @include before_fig(rem(30px), rem(5px), #f08787);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: none;
+  box-shadow: 0 rem(11px) rem(40px) rgba(84, 24, 28, 0.21);
+  border-radius: rem(28px);
+  height: rem(55px);
+  color: $mainColorText;
+  font-size: rem(16px);
+  font-weight: 700;
+  background-color: #fff;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.btn_submit {
+  box-shadow: 0 rem(11px) rem(24px) rgba(213, 154, 117, 0.29);
+  background-color: $submitColor;
+  color: #4d374a;
+}
+
+.input {
+  display: block;
+  position: relative;
+  width: 100%;
+  max-width: rem(356px);
+  box-shadow: 0 rem(8px) rem(38px) rgba(175, 175, 185, 0.13);
+  margin-bottom: rem(35px);
+  transition: box-shadow .4s;
+  border-radius: rem(25px);
+  input {
+    height: rem(50px);
+    width: 100%;
+    padding-right: rem(25px);
+    padding-left: rem(23px);
+    border-radius: rem(25px);
+    border: rem(1px) solid #eaeaf3;
+    color: $mainColorText;
+    font: 400 rem(17px)/1 $mainFont;
+  }
+  .input_icon {
+    position: absolute;
+    top: rem(5px);
+    right: rem(5px);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: .4s;
+    transition: .4s;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-color: #f6f6f9;
+    width: rem(40px);
+    height: rem(40px);
+    border-radius: 50%;
+    color: $iconColor;
+  }
+  .placeholder {
+    position: absolute;
+    top: 50%;
+    left: rem(23px);
+    text-align: left;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    color: $mainColorText;
+    font: 400 rem(17px)/1 $mainFont;
+    -webkit-transition: .4s;
+    transition: .4s;
+
+  }
+  &.focus {
+    box-shadow: 0 rem(6px) rem(27px) rgba(175, 175, 185, 0.25);
+    .input_icon {
+      -webkit-transform: scale(0);
+      transform: scale(0);
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}
+
+.form_wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  outline: none;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: inset 0 0 0 50px #fff !important;
+  -webkit-text-fill-color: $mainColorText !important;
+  color: $mainColorText !important;
+}
