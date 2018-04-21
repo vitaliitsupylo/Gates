@@ -1,0 +1,22 @@
+
+.consultation {
+  padding: 0 0 rem(200px);
+  .title_block {
+    margin-bottom: rem(65px);
+  }
+  .consultation_text_form {
+    text-align: center;
+    font-size: rem(20px);
+    color: #2e2f33;
+    width: 100%;
+    line-height: 1.5;
+    max-width: rem(490px);
+    margin: 0 auto rem(55px);
+  }
+  .form_wrap {
+    .btn {
+      width: 100%;
+      max-width: rem(330px);
+    }
+  }
+}
